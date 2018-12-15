@@ -11,20 +11,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- Equations automatically numbered -->
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script> 
-<script type="text/javascript" async
-if ( 'https:' == location.protocol && 'undefined' === typeof(MathJax) ) {
-    var mjs = $('script[src^="https://cdnjs.cloudflare.com"]').remove();
-    if ( mjs.length > 0 ) $.ajax( {
-        dataType: "script", cache: true,
-        url: mjs[0].src.replace('https://cdnjs.cloudflare.com', 'https://c328740.ssl.cf1.rackcdn.com')
-    } );
-}
-</script>
+       <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+       <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+       </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" async></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129121205-1"></script>
 <script>
@@ -230,7 +226,7 @@ MathJax.Hub.Config({
 	</div>
 
 	<div class="post-content" itemprop="articleBody">
-		<p>La version PDF de cet article est disponible <a href="http://www.reflechir.fr/assets/Arithmétique.pdf">ici</a>.</p>
+		<p>La version PDF de cet article est disponible <a href="http://www.reflechir.fr/assets/Arithmétique.pdf">ici</a>.</p>
 
 <p>L’arithmétique est la branche des mathématiques qui s’intéresse aux nombres ($\alpha \rho \iota \theta \mu o \varsigma$ ou arithmos en grec signifie nombre). Elle est prolongée par la théorie des nombres (il n’y a pas de consensus sur où s’arrête précisément l’arithmétique et où commence précisément la théorie des nombres, mais en général quand on utilise des outils d’algèbre ou d’analyse (voir articles 9 et 10) on parle de théorie des nombres et sinon on parle d’arithmétique).</p>
 
@@ -484,7 +480,7 @@ donc $v_p$(pgcd$(x_1^{a_1},\dots,x_n^{a_n}))) = 0$.</p>
 
 <p><strong>Prop</strong> : Il n’y a pas de solution dans $\mathbb{Z} \setminus${$0$} à $x^3+y^3=z^3$.</p>
 
-<p>Je connais deux preuves de cette proposition; l’une n’utilise que des outils arithmétiques mais est assez fastidieuse (voir <a href="http ://fermatslasttheorem.blogspot.com/2005/05/fermats-last-theorem-proof-for-n3.html">ici</a> pour cette preuve) et l’autre utilise des nombres complexes; cette dernière preuve sera faite dans l’article 19 Théorie des nombres.</p>
+<p>Je connais deux preuves de cette proposition; l’une n’utilise que des outils arithmétiques mais est assez fastidieuse (voir <a href="http://fermatslasttheorem.blogspot.com/2005/05/fermats-last-theorem-proof-for-n3.html">ici</a> pour cette preuve) et l’autre utilise des nombres complexes; cette dernière preuve sera faite dans l’article 19 Théorie des nombres.</p>
 
 <p>Clémentine Lemarié–Rieusset</p>
 
@@ -503,13 +499,13 @@ donc $v_p$(pgcd$(x_1^{a_1},\dots,x_n^{a_n}))) = 0$.</p>
 		</div>
 
 		<div class="share-buttons">
-			<a href="http://www.facebook.com/sharer.php?url=" +  + ";" target="_blank">
+			<a href="http://www.facebook.com/sharer.php?url=" + /math%C3%A9matiques/sciences/2017/11/20/5-arithmetique/ + ";" target="_blank">
 				<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
 			</a>
 			
 			<div class="vertical-separator"></div>
 
-			<a href="https://twitter.com/share?url=" +  + ";" target="_blank">
+			<a href="https://twitter.com/share?url=" + /math%C3%A9matiques/sciences/2017/11/20/5-arithmetique/ + ";" target="_blank">
 				<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
 			</a>
 		</div>
