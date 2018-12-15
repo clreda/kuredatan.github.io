@@ -11,9 +11,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
-</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>
+<!-- Equations automatically numbered -->
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } }); </script> 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129121205-1"></script>
 <script>
@@ -118,7 +118,7 @@ MathJax.Hub.Config({
 	<div class="dropdown">
 		
 		
-		<button class="dropbtn">Actualités<i class="fa fa-caret-down"></i></button>
+		<a href="http://www.reflechir.fr/category/actualites/"><button class="dropbtn">Actualités<i class="fa fa-caret-down"></i></button></a>
 		<div class="dropdown-content">
 		
 			
@@ -139,16 +139,16 @@ MathJax.Hub.Config({
 	<div class="dropdown">
 		
 		
-		<button class="dropbtn">Sciences<i class="fa fa-caret-down"></i></button>
+		<a href="http://www.reflechir.fr/category/sciences/"><button class="dropbtn">Sciences<i class="fa fa-caret-down"></i></button></a>
 		<div class="dropdown-content">
 		
 			
 			
-			<a href="http://www.reflechir.fr/category/mathematiques/">Mathématiques</a>
+			<a href="http://www.reflechir.fr/category/informatique/">Informatique</a>
 		
 			
 			
-			<a href="http://www.reflechir.fr/category/informatique/">Informatique</a>
+			<a href="http://www.reflechir.fr/category/mathematiques/">Mathématique</a>
 		
 		</div>
 	</div> 
@@ -156,7 +156,7 @@ MathJax.Hub.Config({
 	<div class="dropdown">
 		
 		
-		<button class="dropbtn">Sciences humaines<i class="fa fa-caret-down"></i></button>
+		<a href="http://www.reflechir.fr/category/scienceshumaines/"><button class="dropbtn">Sciences humaines<i class="fa fa-caret-down"></i></button></a>
 		<div class="dropdown-content">
 		
 			
@@ -219,7 +219,9 @@ MathJax.Hub.Config({
 	</div>
 
 	<div class="post-content" itemprop="articleBody">
-		<p>L’arithmétique est la branche des mathématiques qui s’intéresse aux nombres ($\alpha \rho \iota \theta \mu o \varsigma$ ou arithmos en grec signifie nombre). Elle est prolongée par la théorie des nombres (il n’y a pas de consensus sur où s’arrête précisément l’arithmétique et où commence précisément la théorie des nombres, mais en général quand on utilise des outils d’algèbre ou d’analyse (voir articles 9 et 10) on parle de théorie des nombres et sinon on parle d’arithmétique).</p>
+		<p>La version PDF de cet article est disponible <a href="http://www.reflechir.fr/assets/Arithmétique.pdf">ici</a>.</p>
+
+<p>L’arithmétique est la branche des mathématiques qui s’intéresse aux nombres ($\alpha \rho \iota \theta \mu o \varsigma$ ou arithmos en grec signifie nombre). Elle est prolongée par la théorie des nombres (il n’y a pas de consensus sur où s’arrête précisément l’arithmétique et où commence précisément la théorie des nombres, mais en général quand on utilise des outils d’algèbre ou d’analyse (voir articles 9 et 10) on parle de théorie des nombres et sinon on parle d’arithmétique).</p>
 
 <h2 id="i-plus-grand-commun-diviseur-et-plus-petit-commun-multiple">I) Plus grand commun diviseur et plus petit commun multiple.</h2>
 
@@ -453,33 +455,25 @@ donc $v_p$(pgcd$(x_1^{a_1},\dots,x_n^{a_n}))) = 0$.</p>
 
 <p><em>Exo</em> : Il n’y a pas de solution dans $\mathbb{N} \setminus${$0$} à $x^4+y^4=z^2$.</p>
 
-<p>1) Se ramener à $x^2,y^2,z$ de pgcd 1.</p>
+<p>1) Se ramener à $x,y,z$ de pgcd $1$.</p>
 
-<p>2) Utiliser l’exercice précédent pour avoir une expression de $x^2,y^2,z$.</p>
+<p>Indication : en notant $d$ le pgcd de $x,y,z$, montrer que $\frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}$ sont de pgcd $1$.</p>
 
-<p>3) Vérifier que $y$ et les deux paramètres de la question 2) forment un triplet pythagoricien et en déduire une expression avec deux nouveaux paramètres.</p>
+<p>2) Vérifier que si $x,y,z$ est solution de $x^4+y^4=z^2$ et de pgcd $1$ alors $(x^2,y^2,z)$ est un triplet pythagoricien de pgcd $1$ et en déduire qu’il existe $u,v \in \mathbb{N} \setminus {0}$ de pgcd $1$ tels que $x^2 = 2uv, y^2 = v^2 - u^2, z = v^2 + u^2$ (quitte à échanger $x$ et $y$).</p>
 
-<p>4) Utiliser le fait que toute partie non vide de $\mathbb{N}$ admet un plus petit élément pour conclure.</p>
+<p>Indication : dans la preuve de l’exercice sur les triplets pythagoriciens, vous devriez avoir trouvé de tels $u,v$ mais sans avoir prouvé qu’ils sont de pgcd $1$; en revanche vous devriez avoir prouvé que $u^2 = \frac{z-y}{2}$, $v^2 = \frac{z+y}{2}$ et pgcd$(\frac{z-y}{2},\frac{z+y}{2}) = 1$, et vous devriez pouvoir en déduire que pgcd$(u,v) = 1$.</p>
+
+<p>3) Montrer que $v$ est impair et que $u$ est pair puis en déduire que $v$ est un carré d’entier et que $u$ est le produit de $2$ et d’un carré d’entier.</p>
+
+<p>4) Vérifier que $(u,y,v)$ est un triplet pythagoricien de pgcd $1$ et, en utilisant les questions précédentes, en déduire qu’il existe $x’,y’,z’ \in \mathbb{N} \setminus {0}$ tels que $x’^4 + y’^4 = z’^2$ et $z’ &lt; z$.</p>
+
+<p>5) Utiliser le fait que toute partie non vide de $\mathbb{N}$ admet un plus petit élément pour conclure.</p>
 
 <p>Passons au cas $n = 3$. On a besoin de définir la valeur absolue d’un entier : si $x \in \mathbb{Z}$, sa valeur absolue $abs(x)$ est $x$ si $x \in \mathbb{N}$, $-x$ sinon. On remarque que la valeur absolue d’un entier est toujours positive. On définit le pgcd de $x,y,z \in \mathbb{Z}$ par pgcd$(x,y,z) =$ pgcd$(abs(x),abs(y),abs(z))$.</p>
 
-<p><em>Exo</em> : Il n’y a pas de solution dans $\mathbb{Z} \setminus${$0$} à $x^3+y^3=z^3$.</p>
+<p><strong>Prop</strong> : Il n’y a pas de solution dans $\mathbb{Z} \setminus${$0$} à $x^3+y^3=z^3$.</p>
 
-<p>1) Se ramener à $x,y,z$ de pgcd 1.</p>
-
-<p>Supposons qu’il existe $x,y,z \in \mathbb{N} \setminus {0}$ de pgcd 1 tels que  $x^3+y^3=z^3$.</p>
-
-<p>2) Montrer que pgcd$(x,y) = 1$. En déduire $x &gt; y$ ou $x &lt; y$.</p>
-
-<p>Dans la suite on supposera $x &gt; y$ (si ce n’était pas le cas on n’a qu’à échanger $x$ et $y$ puisqu’ils vérifient les mêmes hypothèses).</p>
-
-<p>3) Montrer qu’il y a exactement un nombre parmi $x, y$ et $z$ qui est pair.</p>
-
-<p>4) Dans le cas où $z$ est ce nombre pair, montrer qu’il existe $u,v \in \mathbb{N} \setminus {0}$ de pgcd 1 tels que $u$ et $v$ sont de parité opposée (l’un est pair et l’autre est impair) et $2u(u^2+3v^2)$ est un cube d’entier. (Indication : $u = \frac{x+y}{2}$ et $v = \frac{x-y}{2}$)</p>
-
-<p>5) Montrer que pgcd$(2u,u^2+3v^2) = 1$ ou 3.</p>
-
-<p>6) Utiliser le fait que toute partie non vide de $\mathbb{N}$ admet un plus petit élément pour conclure.</p>
+<p>Je connais deux preuves de cette proposition; l’une n’utilise que des outils arithmétiques mais est assez fastidieuse (voir <a href="http ://fermatslasttheorem.blogspot.com/2005/05/fermats-last-theorem-proof-for-n3.html">ici</a> pour cette preuve) et l’autre utilise des nombres complexes; cette dernière preuve sera faite dans l’article 19 Théorie des nombres.</p>
 
 <p>Clémentine Lemarié–Rieusset</p>
 
