@@ -373,9 +373,23 @@ En effet, si on avait $x^4 + y^4 = c^4$ avec $x,y,c \in \mathbb{Z} \setminus {0}
 
 <p><strong>Exo</strong> : Il n’y a pas de solution dans $\mathbb{N} \setminus {0}$ à $x^4+y^4=z^2$.</p>
 
-<p>Je mets à jour cet article dès que j’ai fini de taper le corrigé de cet exercice.</p>
+<p>Il suffit de montrer qu’il n’y a pas de solution dans $\mathbb{N} \setminus {0}$ car les exposants ($4$,$4$ et $2$) sont pairs (c’est-à-dire divisibles par $2$;  comme dans la remarque plus haut, on peut changer les signes de $x$, $y$, $z$ pour avoir des entiers positifs).</p>
 
-<p><strong>Exo</strong> : Il n’y a pas de solution dans $\mathbb{Z} \setminus {0}$ à $x^3+y^3=z^3$.</p>
+<p><strong>Exo</strong> : Il n’y a pas de solution dans $\mathbb{N} \setminus${$0$} à $x^4+y^4=z^2$.</p>
+
+<p>1) Se ramener à $x,y,z$ de pgcd $1$.</p>
+
+<p>Indication : en notant $d$ le pgcd de $x,y,z$, montrer que $\frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}$ sont de pgcd $1$.</p>
+
+<p>2) Vérifier que si $x,y,z$ est solution de $x^4+y^4=z^2$ et de pgcd $1$ alors $(x^2,y^2,z)$ est un triplet pythagoricien de pgcd $1$ et en déduire qu’il existe $u,v \in \mathbb{N} \setminus {0}$ de pgcd $1$ tels que $x^2 = 2uv, y^2 = v^2 - u^2, z = v^2 + u^2$ (quitte à échanger $x$ et $y$).</p>
+
+<p>Indication : dans la preuve de l’exercice sur les triplets pythagoriciens, vous devriez avoir trouvé de tels $u,v$ mais sans avoir prouvé qu’ils sont de pgcd $1$; en revanche vous devriez avoir prouvé que $u^2 = \frac{z-y}{2}$, $v^2 = \frac{z+y}{2}$ et pgcd$(\frac{z-y}{2},\frac{z+y}{2}) = 1$, et vous devriez pouvoir en déduire que pgcd$(u,v) = 1$.</p>
+
+<p>3) Montrer que $v$ est impair et que $u$ est pair puis en déduire que $v$ est un carré d’entier et que $u$ est le produit de $2$ et d’un carré d’entier.</p>
+
+<p>4) Vérifier que $(u,y,v)$ est un triplet pythagoricien de pgcd $1$ et, en utilisant les questions précédentes, en déduire qu’il existe $x’,y’,z’ \in \mathbb{N} \setminus {0}$ tels que $x’^4 + y’^4 = z’^2$ et $z’ &lt; z$.</p>
+
+<p>5) Utiliser le fait que toute partie non vide de $\mathbb{N}$ admet un plus petit élément pour conclure.</p>
 
 <p>Je mets à jour cet article dès que j’ai fini de taper le corrigé de cet exercice.</p>
 
@@ -428,12 +442,12 @@ En effet, si on avait $x^4 + y^4 = c^4$ avec $x,y,c \in \mathbb{Z} \setminus {0}
 		<div>
 			<center>
 				<h3><p><b>
-				<img src="/images/attention.png" style="max-weight:20px;"></img>
+				<img src="/images/attention.png" style="max-weight:5px;"></img>
 				Nous sommes actuellement à la recherche de contributeurs·trices pour les différentes sections du site.
 				</b></p></h3>
 				<h3><p><b>
 				N'hésitez pas à nous contacter <a href="mailto:sitereflechir@gmail.com">par mail</a>.
-				<img src="/images/attention.png" style="max-weight:20px;"></img>
+				<img src="/images/attention.png" style="max-weight:5px;"></img>
 				</b><p></h3>
 			</center>
                 </div>
