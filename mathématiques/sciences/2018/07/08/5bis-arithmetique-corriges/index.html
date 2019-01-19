@@ -381,6 +381,28 @@ En effet, si on avait $x^4 + y^4 = c^4$ avec $x,y,c \in \mathbb{Z} \setminus {0}
 
 <p>Indication : en notant $d$ le pgcd de $x,y,z$, montrer que $\frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}$ sont de pgcd $1$.</p>
 
+<p>Avant de parler du pgcd de $\displaystyle \frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}$, il faut déjà vérifier que ce sont des nombres entiers, c’est-à-dire que $d$ divise $x$ et $y$ et $d^2$ divise $z$. On sait que $d$ divise $x,y,z$ car $d$ est le pgcd de $x,y,z$.</p>
+
+<p>Soit $p$ un nombre premier. $2v_p(z) = v_p(z^2) = v_p(x^4 + y^4) \geq \min(v_p(x^4),v_p(y^4)) = \min(4v_p(x),4v_p(y)) = 4\min(v_p(x),v_p(y))$ donc $v_p(z) \geq 2\min(v_p(x),v_p(y)) \geq 2\min(v_p(x),v_p(y),v_p(z)) = 2v_p(d) = v_p(d^2)$.<br />
+Ainsi $d^2$ divise $z$.</p>
+
+<p>(Si vous avez eu du mal à suivre, relisez la partie de l’article d’Arithmétique qui traite des valuations $p$-adiques, et pour les inégalités remarquez que si $p^k$ divise $a$ et $b$ alors $p^k$ divise $a + b$ donc $v_p(a+b) \geq \min(v_p(a),v_p(b))$ et que le minimum d’un ensemble $A$ plus grand (pour l’inclusion) qu’un ensemble $B$ est plus petit que le minimum de $B$ (en particulier pour tous $a,b,c$ $\min(a,b) \geq \min(a,b,c)$))</p>
+
+<p>On peut désormais remarquer que pgcd$(\displaystyle \frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}) = \frac{1}{d}$pgcd$\displaystyle(x,y,\frac{z}{d})$ et qu’il suffit donc de montrer que pgcd$\displaystyle(x,y,\frac{z}{d}) = d$ pour montrer que 
+<script type="math/tex">\text{pgcd}(\displaystyle \frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}) = 1.</script></p>
+
+<p>On va montrer que pour tout $p$ premier $v_p(d) = v_p(\text{pgcd}\displaystyle(x,y,\frac{z}{d}))$.</p>
+
+<p>Soit $p$ un nombre premier.</p>
+
+<p>On remarque tout d’abord que $v_p(z) \geq v_p(\displaystyle \frac{z}{d})$ (car $\displaystyle \frac{z}{d}$ divise $z$) donc $v_p(d) = \min(v_p(x),v_p(y),v_p(z)) \geq \min(v_p(x),v_p(y),v_p(\displaystyle\frac{z}{d})) = v_p(\text{pgcd}\displaystyle(x,y,\frac{z}{d}))$.</p>
+
+<p>On remarque ensuite qu’on a montré plus haut que $v_p(z) \geq v_p(d^2)$, ce qui entraîne $v_p(\displaystyle\frac{z}{d}) \geq v_p(d)$ (car $v_p(\displaystyle\frac{z}{d}) = v_p(z) - v_p(d)$ et $v_p(d) = v_p(d^2) - v_p(d)$ (voir la proposition dans l’article Arithmétique qui stipule que pour tous $a,b$ $v_p(ab) = v_p(a) + v_p(b)$)), d’où $v_p(d) \leq \min(v_p(x),v_p(y),v_p(\displaystyle\frac{z}{d})) = v_p(\text{pgcd}\displaystyle(x,y,\frac{z}{d}))$ (car on savait déjà $v_p(d) \leq v_p(x)$ et $v_p(d) \leq v_p(y)$).</p>
+
+<p>Ainsi $v_p(d) = v_p(\text{pgcd}\displaystyle(x,y,\frac{z}{d}))$.</p>
+
+<p>Ainsi $d = \text{pgcd}\displaystyle(x,y,\frac{z}{d})$ et $\text{pgcd}(\displaystyle \frac{x}{d}, \frac{y}{d}, \frac{z}{d^2}) = 1$.</p>
+
 <p>2) Vérifier que si $x,y,z$ est solution de $x^4+y^4=z^2$ et de pgcd $1$ alors $(x^2,y^2,z)$ est un triplet pythagoricien de pgcd $1$ et en déduire qu’il existe $u,v \in \mathbb{N} \setminus {0}$ de pgcd $1$ tels que $x^2 = 2uv, y^2 = v^2 - u^2, z = v^2 + u^2$ (quitte à échanger $x$ et $y$).</p>
 
 <p>Indication : dans la preuve de l’exercice sur les triplets pythagoriciens, vous devriez avoir trouvé de tels $u,v$ mais sans avoir prouvé qu’ils sont de pgcd $1$; en revanche vous devriez avoir prouvé que $u^2 = \frac{z-y}{2}$, $v^2 = \frac{z+y}{2}$ et pgcd$(\frac{z-y}{2},\frac{z+y}{2}) = 1$, et vous devriez pouvoir en déduire que pgcd$(u,v) = 1$.</p>
